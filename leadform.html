@@ -23,6 +23,24 @@
 
   <link rel="stylesheet" href="css/leadform.css">
 
+  <!-- Event snippet for Subscribe form submit conversion page
+  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-384072878/66ugCNr5vZgYEK75kbcB',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
+
 </head>
 
 <body>
@@ -42,7 +60,7 @@
 
   <!-- OREDER PLACED -->
   <div id="orderContainer">
-    <form action="leadConfirmed.html">
+    <form action="leadConfirmed.html" onsubmit="gtag_report_conversion()">
       <label for="fname">First name</label>
       <input type="text" id="fname" name="fname" placeholder="John">
 
