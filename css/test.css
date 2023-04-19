@@ -25,6 +25,50 @@
     word-spacing: 1px;
 }
 
+#customerInfo
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  margin: 30px;
+}
+
+.fieldLabel
+{
+  text-align: right;
+}
+
+.fieldValue
+{
+  text-align: left;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+    max-width: 600px;
+}
+
+label {
+    grid-column: 1 / 2;
+}
+
+input,
+button, span {
+    grid-column: 2 / 3;
+}
+
+#phonecontainer{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+
+button {
+    float: right;
+    width: calc(100% - 200px);
+}
+
 /* ----------------------------- MEDIA QUERY --------------------------- */
 
 @media(max-width: 700px)

@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TW4RHSD');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,10 +11,41 @@
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/orderPlaced.css">
+    <link rel="stylesheet" href="css/testConfirmed.css">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TW4RHSD');</script>
+    <!-- End Google Tag Manager -->
 
+    <script type="text/javascript">
+      function pushPurchaseEvent() {
+        dataLayer.push({
+          ecommerce: null
+        }); // Clear the previous ecommerce object.
+        dataLayer.push({
+          event: "purchase",
+          ecommerce: {
+            items: [{
+              item_id: "123",
+              item_name: "123",
+              affiliation: "Google Merchandise Store",
+              currency: "RS",
+              index: 0,
+              item_brand: "123",
+              item_category: "Stuff",
+              item_category2: "Things",
+              price: 123,
+              quantity: 1
+            }]
+          }
+        });
+      }
+    </script>
 </head>
-<body>
+<body onload="pushPurchaseEvent();">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TW4RHSD"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -44,9 +68,7 @@
         <div id="check"><i class="fas fa-check-circle"></i></div>
 
         <div id="aboutCheck">
-            Thanks <span id="email">test@test.com</span/> !
-            <h1> Order Placed Successfully! </h1>
-            <p> We've sent you an email with the Order details. </p>
+            <h1> Test Submitted Successfully! </h1>
         </div>
     </div>
         <!-- FOOTER -->
@@ -62,5 +84,4 @@
             }
         </script>
 </body>
-<script src="/orderPlaced.js"></script>
 </html>
