@@ -89,6 +89,28 @@
       <div class="fieldLabel">Email</div>
       <div class="fieldValue" id="email">john.doe@test.com</div>
 
+      <div class="fieldLabel">Country Code</div>
+      <div class="fieldValue">
+        <select name="country_code" id="country_code_with_val">
+          <option value="+65">+65</option>
+          <option value="+64">+64</option>
+          <option value="+63">+63</option>
+          <option value="+62">+62</option>
+          <option value="+61">+61</option>
+        </select>
+      </div>
+
+      <div class="fieldLabel">Country Code 2</div>
+      <div class="fieldValue">
+        <select name="country_code" id="country_code_without_val">
+          <option>+65</option>
+          <option>+64</option>
+          <option>+63</option>
+          <option>+62</option>
+          <option>+61</option>
+        </select>
+      </div>
+
     </div>
     <input id="submit" type="button" value="submit" onclick="pushBeginCheckoutEvent();" />
   </div>
