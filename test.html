@@ -30,7 +30,9 @@
       var callback = function () {
            window.location.href = url;
        };
-
+       gtag('set', 'user_data', {
+        "email": "test@test.com"
+        });
        gtag('event', 'conversion', {
            'send_to': 'AW-384072878/5ogzCMy89aYDEK75kbcB',
            'value': 1.0,
