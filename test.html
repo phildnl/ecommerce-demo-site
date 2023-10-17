@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-384072878"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-384072878', {'allow_enhanced_conversions':true});
+  </script>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> SIGN UP </title>
+  <!-- favicon -->
+  <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/test.css">
+
+  <script type="text/javascript">
+    function pushBeginCheckoutEvent(url) {
+      var callback = function () {
+           window.location.href = url;
+       };
+
+       gtag('event', 'conversion', {
+           'send_to': 'AW-384072878/5ogzCMy89aYDEK75kbcB',
+           'value': 1.0,
+           'currency': 'USD',
+           'transaction_id': '',
+           'event_callback': callback
+       });
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div id="1"></div>
+  <script>
+    load("header.html");
+
+    function load(url) {
+      req = new XMLHttpRequest();
+      req.open("GET", url, false);
+      req.send(null);
+      document.getElementById(1).innerHTML = req.responseText;
+    }
+  </script>
+
+  <div id="orderContainer">
+
+    <div id="customerInfo">
+      <div class="fieldLabel">First name</div>
+      <div class="fieldValue" id="fname">John</div>
+
+      <div class="fieldLabel">Last name</div>
+      <div class="fieldValue" id="lname">Doe</div>
+
+      <div class="fieldLabel">Email</div>
+      <div class="fieldValue" id="email">john.doe@test.com</div>
+
+      <button id="whatsapp_lead" style="width:100px;background-color:#34A853; border:1px solid #DADCE0; cursor:pointer; padding: 15px">Whatsapp</button>
+
+    </div>
+    <input id="submit" type="button" value="submit" onclick="pushBeginCheckoutEvent('/testConfirmed.html');" />
+
+  </div>
+
+  <!-- FOOTER -->
+  <div id="4"></div>
+  <script>
+    load("footer.html");
+
+    function load(url) {
+      req = new XMLHttpRequest();
+      req.open("GET", url, false);
+      req.send(null);
+      document.getElementById(4).innerHTML = req.responseText;
+    }
+  </script>
+</body>
+
+</html>
